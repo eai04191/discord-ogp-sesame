@@ -7,8 +7,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const config = {
-    suppressOriginalEmbeds:
-        Boolean(process.env.SUPRESS_ORIGINAL_EMBED) || false,
+    suppressOriginalEmbeds: process.env.SUPRESS_ORIGINAL_EMBED === "true",
 };
 
 const client = new Client();
